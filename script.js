@@ -82,11 +82,11 @@ function updateScore(result) {
 
 function updateScoreBoard() {
     if (playerScore == 5) {
-        score.textContent = `You win!`
+        score.textContent = `You win!`;
     } else if (computerScore == 5) {
-        score.textContent = 'Computer wins!'
+        score.textContent = "Computer wins!";
     } else {
-        score.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+        score.textContent = `Player Score: ${playerScore}   -   Computer Score: ${computerScore}`;
     }
     return;
 }
