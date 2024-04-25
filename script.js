@@ -1,3 +1,27 @@
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+rockButton.addEventListener("click", () => {
+    let result = playRound("rock", getComputerChoice());
+    console.log(result);
+    scoreBoard.textContent = result;
+});
+
+paperButton.addEventListener("click", () => {
+    let result = playRound("paper", getComputerChoice());
+    console.log(result);
+    scoreBoard.textContent = result;
+});
+
+scissorsButton.addEventListener("click", () => {
+    let result = playRound("scissors", getComputerChoice());
+    console.log(result);
+    scoreBoard.textContent = result;
+});
+
+const scoreBoard = document.querySelector("#scoreBoard");
+
 function getComputerChoice() {
     // randomly return either rock, paper or scissors
     let randomizer = Math.floor(Math.random() * 10);
@@ -45,10 +69,10 @@ function playGame() {
         let playerSelection = prompt("Rock, Paper, or Scissors?");
         let roundResult = playRound(playerSelection, getComputerChoice());
         console.log(roundResult);
-        
-        if (roundResult === 'w') {
+
+        if (roundResult === "w") {
             playerScore++;
-        } else if (roundResult === 'l') {
+        } else if (roundResult === "l") {
             computerScore++;
         }
 
@@ -56,10 +80,10 @@ function playGame() {
     }
 
     if (playerScore > computerScore) {
-        console.log(`You win ${playerScore} to ${computerScore}!`)
+        console.log(`You win ${playerScore} to ${computerScore}!`);
     } else if (computerScore > playerScore) {
-        console.log(`You lose ${computerScore} to ${playerScore} :(`)
+        console.log(`You lose ${computerScore} to ${playerScore} :(`);
     } else {
-        console.log("Tie game!")
+        console.log("Tie game!");
     }
 }
