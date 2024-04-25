@@ -90,30 +90,3 @@ function updateScoreBoard() {
     }
     return;
 }
-
-// function playGame() {
-//     let playerScore = 0;
-//     let computerScore = 0;
-
-//     for (let i = 0; i < 5; i++) {
-//         let playerSelection = prompt("Rock, Paper, or Scissors?");
-//         let roundResult = playRound(playerSelection, getComputerChoice());
-//         console.log(roundResult);
-
-//         if (roundResult === "w") {
-//             playerScore++;
-//         } else if (roundResult === "l") {
-//             computerScore++;
-//         }
-
-//         console.log(`Player: ${playerScore}, Computer: ${computerScore}`);
-//     }
-
-//     if (playerScore > computerScore) {
-//         console.log(`You win ${playerScore} to ${computerScore}!`);
-//     } else if (computerScore > playerScore) {
-//         console.log(`You lose ${computerScore} to ${playerScore} :(`);
-//     } else {
-//         console.log("Tie game!");
-//     }
-// }
