@@ -14,7 +14,6 @@ rockButton.addEventListener("click", () => {
 
 paperButton.addEventListener("click", () => {
     let result = playRound("paper", getComputerChoice());
-    console.log(result);
     roundResult.textContent = result;
 
     updateScore(result);
@@ -23,7 +22,6 @@ paperButton.addEventListener("click", () => {
 
 scissorsButton.addEventListener("click", () => {
     let result = playRound("scissors", getComputerChoice());
-    console.log(result);
     roundResult.textContent = result;
 
     updateScore(result);
@@ -78,11 +76,18 @@ function updateScore(result) {
     } else if (result == "w") {
         playerScore++;
     }
+
     return;
 }
 
 function updateScoreBoard() {
-    score.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+    if (playerScore == 5) {
+        score.textContent = `You win!`
+    } else if (computerScore == 5) {
+        score.textContent = 'Computer wins!'
+    } else {
+        score.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+    }
     return;
 }
 
