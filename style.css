@@ -6,6 +6,21 @@ html {
     background-color: #d2d2d2;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    background-color: #bc81bf;
+    color: white;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
 #buttonHouse {
     display: flex;
     align-items: center;
@@ -21,9 +36,16 @@ button {
     box-shadow: 1px 1px 2px black;
     color: white;
     background-color: teal;
+    text-shadow: 1px 1px 3px black;
+    font-size: 20px;
 }
 
 #scoreBoard {
     color: white;
     font-size: 48px;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
